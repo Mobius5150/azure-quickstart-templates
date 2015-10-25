@@ -412,7 +412,7 @@ if [ ismaster ] && [ "$SWARMENABLED" == "true" ] ; then
   sleep 10
   echo sudo docker run -d -e SWARM_MESOS_USER=root \
       --restart=always \
-      -p 2376:2375 -p 3375:3375 swarm manage \
+      -p 2376:2375 -p 3375:3375 swarm:1.0.0-rc2 manage \
       -c mesos-experimental \
       --cluster-opt mesos.address=0.0.0.0 \
       --cluster-opt mesos.port=3375 $zkmesosconfig
